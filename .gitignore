@@ -1,0 +1,12 @@
+# ide stuff
+.vscode/**
+.git/**
+**/jsconfig.json
+**/tsconfig.json
+# windows crap
+**.db*
+# the coveted
+# the infamous
+**.DS_Store
+# node.js
+node_modules/**
