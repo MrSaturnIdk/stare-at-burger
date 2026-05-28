@@ -4,6 +4,7 @@
 **/jsconfig.json
 **/tsconfig.json
 # windows crap
+desktop.ini
 **.db*
 # the coveted
 # the infamous

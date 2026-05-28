@@ -3,3 +3,10 @@ Stare at a static image of a cheeseburger, while the only thing changing is how 
 Your time saves as browsing data.
 
 (Note that the browsers calculation of a "second" can depend on its speed. Don't expect it to be 100% accurate all the time.)
+
+# License
+Licensed under [AGPL-3.0-or-later](./LICENSE)
+
+# Contributing
+If you want to contribute,
+read [this](./MrSaturnIdk.github.io/CONTRIBUTING.md).
