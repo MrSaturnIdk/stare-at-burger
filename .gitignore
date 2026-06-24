@@ -1,13 +1,17 @@
 # ide stuff
 .vscode/**
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .git/**
 **/jsconfig.json
 **/tsconfig.json
 # windows crap
-desktop.ini
-**.db*
+**/desktop.ini
+**/Thumbs.db
 # the coveted
 # the infamous
-**.DS_Store
+**/.DS_Store
 # node.js
 node_modules/**
