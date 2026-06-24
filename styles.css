@@ -1,15 +1,5 @@
 body {
-    background-color: #f5bf60;
     overflow: hidden;
-}
-p {
-    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
-    font-family: Arial, sans-serif;
-    text-decoration: #000000;
-}
-.giant {
-    width: 100vw;
-    height: 100vh;
 }
 #burger-text {
     text-align: center;
@@ -21,10 +11,4 @@ p {
 }
 #burger {
     z-index: 1;
-}
-#no-script {
-    z-index: 999;
-}
-#loading-screen {
-    z-index: 998;
 }
