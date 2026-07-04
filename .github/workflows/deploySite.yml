@@ -5,8 +5,7 @@ on:
         branches: ["main"]
         paths:
             - "**"
-            - "!*.md"
-            - "*LICENSE*.md"
+            - "*.md"
             - ".**/**"
     workflow_dispatch:
 
