@@ -1,7 +1,7 @@
 "use strict";
 console.log("Loading :3");
-const LOADING_SCREEN = document.getElementById("#loading-screen");
-const BURGER_TEXT = document.getElementById("#burger-text");
+const LOADING_SCREEN = document.getElementById("loading-screen");
+const BURGER_TEXT = document.getElementById("burger-text");
 let time = Number(localStorage.getItem("stareTime"));
 if (time === null) {
     time = 0;
