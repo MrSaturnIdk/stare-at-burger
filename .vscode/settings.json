@@ -1,6 +1,0 @@
-{
-    "editor.inlineSuggest.enabled": false, // no ai slop!!!
-    "editor.inlineSuggest.suppressSuggestions": true,
-    "workbench.colorTheme": "GitHub Dark Default",
-    "editor.rulers": [120] // line limit :D
-}
