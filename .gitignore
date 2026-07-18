@@ -1,4 +1,6 @@
 .git/**
+# Vim
+**.swp
 # Windows
 **/desktop.ini
 **/Thumbs.db

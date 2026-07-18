@@ -2,9 +2,6 @@ syntax on
 set number
 set ruler
 
-set colorcolumn=80
-highlight colorcolumn ctermbg=215
-
 set backspace=indent,eol,start
 
 set hlsearch
