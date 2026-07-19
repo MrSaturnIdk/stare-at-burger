@@ -27,6 +27,7 @@ function makeDisplayableTime(seconds) {
     ];
     let returnable = "";
     let next = seconds;
+
     for (let i = 0; i < units.length; i++) {
         const {label, number} = units[i];
         const nextModuloed = next % number;
@@ -39,21 +40,23 @@ function makeDisplayableTime(seconds) {
         }
         next = Math.floor(next/number);
     }
+
     returnable = returnable.trim();
     // Trim extra comma
     if (returnable.endsWith(",")) {
         returnable = returnable.slice(0,-1);
     }
+
+    // Oxford comma
     const lastComma = returnable.lastIndexOf(",");
     const firstComma = returnable.indexOf(",");
-    // Oxford comma
     if (lastComma !== -1) {
         if (lastComma === firstComma) {
             returnable = `${returnable.slice(0, lastComma)} and`
                          + returnable.slice(lastComma + 1);
         } else {
             returnable = `${returnable.slice(0, lastComma)}, and`
-            + returnable.slice(lastComma + 1);
+                         + returnable.slice(lastComma + 1);
         }
     }
     if (returnable === "") {
@@ -61,9 +64,11 @@ function makeDisplayableTime(seconds) {
     }
     return returnable;
 }
+
 async function main() {
     while (true) {
-        BURGER_TEXT.textContent = `You have stared at the cheeseburger for ${makeDisplayableTime(time)}.`;
+        BURGER_TEXT.textContent = "You have stared at the cheeseburger for" 
+                                  + makeDisplayableTime(time);
         await wait(1000);
         time++;
         localStorage.setItem("stareTime", String(time));
