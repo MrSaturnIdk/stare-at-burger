@@ -1,16 +1,22 @@
 "use strict";
+/**
+ * main.js
+ * The timer bascially
+ */
 
-console.log("Loading :3");
+console.log("[INFO] Loading");
+
 const LOADING_SCREEN = document.getElementById("loading-screen");
 const BURGER_TEXT = document.getElementById("burger-text");
 
 let time = Number(localStorage.getItem("stareTime"));
+let timeNan = false;
 if (time === null) {
     time = 0;
-    console.log("New user");
+    console.log("[INFO] New user");
 } else if (time === NaN) {
-    time = 0;
-    console.log("Error converting data for some reason");
+    timeNaN = true;
+    console.log("[ERROR] Error converting local data");
 }
 
 function wait(miliseconds) {
@@ -53,10 +59,10 @@ function makeDisplayableTime(seconds) {
     if (lastComma !== -1) {
         if (lastComma === firstComma) {
             returnable = `${returnable.slice(0, lastComma)} and`
-                         + returnable.slice(lastComma + 1);
+                + returnable.slice(lastComma + 1);
         } else {
             returnable = `${returnable.slice(0, lastComma)}, and`
-                         + returnable.slice(lastComma + 1);
+                + returnable.slice(lastComma + 1);
         }
     }
     if (returnable === "") {
@@ -66,14 +72,21 @@ function makeDisplayableTime(seconds) {
 }
 
 async function main() {
+    
     while (true) {
         BURGER_TEXT.textContent = "You have stared at the cheeseburger for" 
-                                  + makeDisplayableTime(time);
+            + makeDisplayableTime(time);
         await wait(1000);
         time++;
         localStorage.setItem("stareTime", String(time));
     }
 }
 LOADING_SCREEN.style.display = "none";
-console.log("Hooray it loaded");
+console.log("[INFO] Loaded");
 main();
+    if (timeNaN) {
+        BURGER_TEXT.textContent = "Error loading data. "
+            + "If you manually modified site data, this may be the reason.";
+        // Stop script
+        await new Promise(() => {});
+    }
