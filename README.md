@@ -7,4 +7,7 @@ Your time saves as browsing data.
 (Note that the browsers calculation of a "second" can depend on its speed.
 Don't expect it to be 100% accurate all the time.)
 ## License
-Licensed under the [AGPL-3.0-or-later](./LICENSE)
+Licensed under the [AGPL-3.0-or-later](./LICENSE).
+### Third party asset
+[resources/burger.png](./resources/burger.png) - Found it on Google.
+Can't remember where it's from and can't find it again.
