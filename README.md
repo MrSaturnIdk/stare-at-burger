@@ -1,4 +1,4 @@
-# stare-at-burger
+# Stare At Burger
 Stare at a static image of a cheeseburger, while the only thing changing is how
 long you stare at it.
 
