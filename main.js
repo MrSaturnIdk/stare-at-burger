@@ -3,18 +3,17 @@
  * main.js
  * The timer bascially
  */
-
 console.log("[INFO] Loading");
 
 const LOADING_SCREEN = document.getElementById("loading-screen");
 const BURGER_TEXT = document.getElementById("burger-text");
 
 let time = Number(localStorage.getItem("stareTime"));
-let timeNan = false;
+let timeNaN = false;
 if (time === null) {
     time = 0;
     console.log("[INFO] New user");
-} else if (time === NaN) {
+} else if (time.isNaN()) {
     timeNaN = true;
     console.log("[ERROR] Error converting local data");
 }
@@ -40,7 +39,7 @@ function makeDisplayableTime(seconds) {
         if (nextModuloed === 1) {
             returnable = `${nextModuloed} ${label}, ${returnable}`;
         } else if (nextModuloed === 0) {
-            // Does nothing since the value isn"t to be added
+            // Does nothing since the value isn't to be added
         } else {
             returnable = `${nextModuloed} ${label}s, ${returnable}`;
         }
@@ -72,7 +71,6 @@ function makeDisplayableTime(seconds) {
 }
 
 async function main() {
-    
     while (true) {
         BURGER_TEXT.textContent = "You have stared at the cheeseburger for" 
             + makeDisplayableTime(time);
@@ -83,10 +81,9 @@ async function main() {
 }
 LOADING_SCREEN.style.display = "none";
 console.log("[INFO] Loaded");
-main();
-    if (timeNaN) {
-        BURGER_TEXT.textContent = "Error loading data. "
-            + "If you manually modified site data, this may be the reason.";
-        // Stop script
-        await new Promise(() => {});
-    }
+if (timeNaN) {
+    BURGER_TEXT.textContent = "Error loading data. "
+        + "If you manually modified site data, this may be the reason.";
+} else {
+    main();
+}
