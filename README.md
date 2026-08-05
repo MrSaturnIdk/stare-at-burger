@@ -4,8 +4,9 @@ long you stare at it.
 
 Your time saves as browsing data.
 
-(Note that the browsers calculation of a "second" can depend on its speed.
-Don't expect it to be 100% accurate all the time.)
+> [!NOTE]
+> The browsers calculation of a "second" can depend on its speed.
+> Don't expect it to be 100% accurate all the time.
 ## License
 Licensed under the [AGPL-3.0-or-later](./LICENSE).
 ### Third party asset
