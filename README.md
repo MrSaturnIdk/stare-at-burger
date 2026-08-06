@@ -10,7 +10,7 @@ Your time saves as browsing data.
 ## Copyright & License
 Copyright © 2026 MrSaturnIdk
 
-Licensed under the [AGPL-3.0-or-later](./LICENSE).
+Licensed under the [AGPL-3.0-or-later](LICENSE).
 ### Third party asset
-[resources/burger.png](./resources/burger.png) - Found it on Google.
+[resources/burger.png](resources/burger.png) - Found it on Google.
 Can't remember where it's from and can't find it again.

@@ -29,8 +29,8 @@ jobs:
             uses: actions/checkout@v7
           - name: Remove useless files
             run: |    
-                rm ./README.md
-                rm ./LICENSE
+                rm README.md
+                rm LICENSE
           - name: Configure site
             uses: actions/configure-pages@v6
           - name: Upload site artifact
