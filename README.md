@@ -7,7 +7,9 @@ Your time saves as browsing data.
 > [!NOTE]
 > The browsers calculation of a "second" can depend on its speed.
 > Don't expect it to be 100% accurate all the time.
-## License
+## Copyright & License
+Copyright © 2026 MrSaturnIdk
+
 Licensed under the [AGPL-3.0-or-later](./LICENSE).
 ### Third party asset
 [resources/burger.png](./resources/burger.png) - Found it on Google.
