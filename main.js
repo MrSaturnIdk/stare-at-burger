@@ -1,8 +1,5 @@
 "use strict";
-/**
- * main.js
- * The timer bascially
- */
+/// The entire timer basically
 console.log("[INFO] Loading");
 
 const LOADING_SCREEN = document.getElementById("loading-screen");
