@@ -1,6 +1,7 @@
 "use strict";
 /// The entire timer basically
 console.log("[INFO] Loading");
+let lastTime = performance.now();
 
 const LOADING_SCREEN = document.getElementById("loading-screen");
 const BURGER_TEXT = document.getElementById("burger-text");
@@ -15,9 +16,6 @@ if (time === 0) {
     console.log("[ERROR] Error converting local data");
 }
 
-function wait(miliseconds) {
-    return new Promise(resolve => setTimeout(resolve, miliseconds));
-}
 function makeDisplayableTime(seconds) {
     const units = [
         {label: "second", number: 60},
@@ -28,7 +26,7 @@ function makeDisplayableTime(seconds) {
         {label: "decade", number: 1}
     ];
     let returnable = "";
-    let next = seconds;
+    let next = Math.round(seconds);
 
     for (let i = 0; i < units.length; i++) {
         const {label, number} = units[i];
@@ -67,14 +65,16 @@ function makeDisplayableTime(seconds) {
     return returnable;
 }
 
-async function main() {
-    while (true) {
-        BURGER_TEXT.textContent = "You have stared at the cheeseburger for" 
-            + makeDisplayableTime(time);
-        await wait(1000);
-        time++;
-        localStorage.setItem("stareTime", String(time));
-    }
+function main(currentTime) {
+    let deltaTime = (currentTime - lastTime) / 1000;
+    lastTime = currentTime;
+    time += deltaTime;
+
+    BURGER_TEXT.textContent = "You have stared at the cheeseburger for"
+        + makeDisplayableTime(time);
+
+    localStorage.setItem("stareTime", String(time));
+    requestAnimationFrame(main);
 }
 
 LOADING_SCREEN.style.display = "none";
@@ -84,4 +84,5 @@ if (timeNaN) {
         + "If you manually modified site data, this may be the reason.";
 } else {
     main();
+    requestAnimationFrame(main);
 }
