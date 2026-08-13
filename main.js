@@ -7,10 +7,10 @@ const BURGER_TEXT = document.getElementById("burger-text");
 
 let time = Number(localStorage.getItem("stareTime"));
 let timeNaN = false;
-if (time === null) {
+if (time === 0) {
     time = 0;
     console.log("[INFO] New user");
-} else if (time.isNaN()) {
+} else if (Number.isNaN(time)) {
     timeNaN = true;
     console.log("[ERROR] Error converting local data");
 }
@@ -76,6 +76,7 @@ async function main() {
         localStorage.setItem("stareTime", String(time));
     }
 }
+
 LOADING_SCREEN.style.display = "none";
 console.log("[INFO] Loaded");
 if (timeNaN) {
