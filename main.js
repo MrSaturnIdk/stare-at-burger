@@ -83,6 +83,5 @@ if (timeNaN) {
     BURGER_TEXT.textContent = "Error loading data. "
         + "If you manually modified site data, this may be the reason.";
 } else {
-    main();
     requestAnimationFrame(main);
 }
