@@ -70,7 +70,7 @@ function main(currentTime) {
     lastTime = currentTime;
     time += deltaTime;
 
-    BURGER_TEXT.textContent = "You have stared at the cheeseburger for"
+    BURGER_TEXT.textContent = "You have stared at the cheeseburger for "
         + makeDisplayableTime(time);
 
     localStorage.setItem("stareTime", String(time));
