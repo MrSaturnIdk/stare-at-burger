@@ -52,11 +52,9 @@ function makeDisplayableTime(seconds) {
     const firstComma = returnable.indexOf(",");
     if (lastComma !== -1) {
         if (lastComma === firstComma) {
-            returnable = `${returnable.slice(0, lastComma)} and`
-                + returnable.slice(lastComma + 1);
+            returnable = `${returnable.slice(0, lastComma)} and ${returnable.slice(lastComma + 1)}`;
         } else {
-            returnable = `${returnable.slice(0, lastComma)}, and`
-                + returnable.slice(lastComma + 1);
+            returnable = `${returnable.slice(0, lastComma)}, and ${returnable.slice(lastComma + 1)}`;
         }
     }
     if (returnable === "") {
@@ -70,8 +68,7 @@ function main(currentTime) {
     lastTime = currentTime;
     time += deltaTime;
 
-    BURGER_TEXT.textContent = "You have stared at the cheeseburger for "
-        + makeDisplayableTime(time);
+    BURGER_TEXT.textContent = `You have stared at the cheeseburger for ${makeDisplayableTime(time)}`;
 
     localStorage.setItem("stareTime", String(time));
     requestAnimationFrame(main);
@@ -80,8 +77,7 @@ function main(currentTime) {
 LOADING_SCREEN.style.display = "none";
 console.log("[INFO] Loaded");
 if (timeNaN) {
-    BURGER_TEXT.textContent = "Error loading data. "
-        + "If you manually modified site data, this may be the reason.";
+    BURGER_TEXT.textContent = "Error loading data. If you manually modified site data, this may be the reason.";
 } else {
     requestAnimationFrame(main);
 }

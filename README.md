@@ -1,6 +1,5 @@
 # Stare At Burger
-Stare at a static image of a cheeseburger, while the only thing changing is how
-long you stare at it.
+Stare at a static image of a cheeseburger, while the only thing changing is how long you stare at it.
 
 Your time saves as browsing data.
 ## Copyright & License
