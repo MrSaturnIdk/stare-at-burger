@@ -1,5 +1,7 @@
-"use strict";
 /// The entire timer basically
+
+"use strict";
+
 console.log("[INFO] Loading");
 let lastTime = performance.now();
 
