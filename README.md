@@ -3,7 +3,7 @@ Stare at a static image of a cheeseburger, while the only thing changing is how 
 
 Your time saves as browsing data.
 ## Copyright & License
-Copyright © 2026 MrSaturnIdk
+Copyright (c) 2026 MrSaturnIdk
 
 Licensed under the [AGPL-3.0-or-later](LICENSE).
 ### Third party asset
